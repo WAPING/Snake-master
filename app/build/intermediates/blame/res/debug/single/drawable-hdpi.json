@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\left.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\left.png"
+    },
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\redstar.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\redstar.png"
+    },
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\yellowstar.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\yellowstar.png"
+    },
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\right.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\right.png"
+    },
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\greenstar.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\greenstar.png"
+    },
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\top.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\top.png"
+    },
+    {
+        "merged": "H:\\Snake1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\bottom.png",
+        "source": "H:\\Snake1\\app\\src\\main\\res\\drawable-hdpi\\bottom.png"
+    }
+]

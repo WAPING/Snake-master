@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+          http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<!--
+     Declare the contents of this Android application.  The namespace
+     attribute brings in the Android platform namespace, and the package
+     supplies a unique name for the application.  When writing your
+     own application, the package name must be changed from "com.example.*"
+     to come from a domain that you own or have control over.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.snake"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="25" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <!-- To store the heap dumps and leak analysis results. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.example.android.snake.MyApplication"
+        android:label="Snake on a Phone" >
+        <activity
+            android:name="com.example.android.snake.Snake"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.squareup.leakcanary.internal.HeapAnalyzerService"
+            android:enabled="false"
+            android:process=":leakcanary" />
+        <service
+            android:name="com.squareup.leakcanary.DisplayLeakService"
+            android:enabled="false" />
+
+        <activity
+            android:name="com.squareup.leakcanary.internal.DisplayLeakActivity"
+            android:enabled="false"
+            android:icon="@drawable/leak_canary_icon"
+            android:label="@string/leak_canary_display_activity_label"
+            android:taskAffinity="com.squareup.leakcanary.com.example.android.snake"
+            android:theme="@style/leak_canary_LeakCanary.Base" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.squareup.leakcanary.internal.RequestStoragePermissionActivity"
+            android:enabled="false"
+            android:icon="@drawable/leak_canary_icon"
+            android:label="@string/leak_canary_storage_permission_activity_label"
+            android:taskAffinity="com.squareup.leakcanary.com.example.android.snake"
+            android:theme="@style/leak_canary_Theme.Transparent" />
+    </application>
+
+</manifest>
